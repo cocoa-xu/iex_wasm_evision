@@ -13,7 +13,7 @@ RUN apt-get -y install --no-install-recommends \
     wget locales make && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
-    echo -e "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8" >> /root/.bashrc
+    echo "export LANG=en_US.UTF-8\nexport LANGUAGE=en_US.UTF-8\nexport LC_ALL=en_US.UTF-8" >> /root/.bashrc
 COPY erlang-25.1.1.tar.gz /erlang-25.1.1.tar.gz
 RUN tar xf erlang-25.1.1.tar.gz && \
     cp -arf erlang-25.1.1/usr/local/* /usr/local/ && \
