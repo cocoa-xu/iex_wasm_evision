@@ -13,11 +13,16 @@ All credit to these projects.
 
 ## How to setup
 1. `cd packages/docker-to-linux`
-2. `make debian`
-3. `mv debian.img ../server/priv/static/rom_images/.`
-4. `docker system prune`
-5. `cd ../server`
-6. `mix phx.server`
+2. `wget https://github.com/cocoa-xu/iex_wasm_evision/downloads/release/prebuilt/erlang-25.1.1.tar.gz -O erlang-25.1.1.tar.gz`
+3. `wget https://github.com/cocoa-xu/iex_wasm_evision/downloads/release/prebuilt/evision.tar.gz -O evision.tar.gz`
+4. `wget https://github.com/cocoa-xu/iex_wasm_evision/downloads/release/prebuilt/mix.tar.gz -O mix.tar.gz`
+5. `wget https://github.com/cocoa-xu/iex_wasm_evision/downloads/release/prebuilt/hex.tar.gz -O hex.tar.gz`
+6. `make debian`
+7. `mkdir -p ../server/priv/static/rom_images/`
+8. `mv debian.img ../server/priv/static/rom_images/`
+9.  `docker system prune`
+10. `cd ../server`
+11. `mix phx.server`
 
 Now go to `http://localhost:4000/` and wait for the magic to happen
 

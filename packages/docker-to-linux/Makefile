@@ -4,7 +4,7 @@ COL_END="\033[0m"
 
 UID=$(shell id -u)
 GID=$(shell id -g)
-VM_DISK_SIZE_MB?=512
+VM_DISK_SIZE_MB?=1024
 
 REPO=docker-to-linux
 
